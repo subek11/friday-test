@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALLMEN Shoes | Premium Footwear</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8f8f8;
+color:#222;
+}
+
+header{
+background:#111;
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#f9b233;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#f9b233;
+color:black;
+padding:15px 35px;
+border:none;
+border-radius:30px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+background:#ffca57;
+}
+
+section{
+padding:70px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-body{
+padding:20px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#d62828;
+margin:10px 0;
+}
+
+.old{
+text-decoration:line-through;
+font-size:16px;
+color:#999;
+margin-left:10px;
+}
+
+.rating{
+color:gold;
+margin-bottom:15px;
+}
+
+button.buy{
+width:100%;
+padding:12px;
+background:#111;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+button.buy:hover{
+background:#f9b233;
+color:black;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.feature{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.feature h3{
+margin:20px 0 10px;
+}
+
+.newsletter{
+background:#111;
+color:white;
+text-align:center;
+}
+
+.newsletter input{
+width:350px;
+max-width:90%;
+padding:15px;
+border:none;
+border-radius:8px;
+margin-top:20px;
+}
+
+.newsletter button{
+margin-top:20px;
+padding:15px 40px;
+border:none;
+background:#f9b233;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#000;
+color:#aaa;
+padding:40px;
+text-align:center;
+}
+
+.cart{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#111;
+color:white;
+padding:15px 22px;
+border-radius:50px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+nav{
+display:none;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">ALLMEN</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#shop">Shop</a>
+<a href="#features">Features</a>
+<a href="#newsletter">Newsletter</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Walk Like Daimond</h1>
+
+<p>Premium Men's Shoes Designed For Comfort, Style & Performance.</p>
+
+<button class="btn">Shop Collection</button>
+
+</div>
+
+</section>
+
+<section id="shop">
+
+<h2 class="title">Featured Shoes</h2>
+
+<div class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80">
+
+<div class="card-body">
+
+<h3>Urban Runner</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$89 <span class="old">$120</span></div>
+
+<button class="buy" onclick="addCart('Urban Runner')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80">
+
+<div class="card-body">
+
+<h3>Classic Leather</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$109 <span class="old">$145</span></div>
+
+<button class="buy" onclick="addCart('Classic Leather')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=700&q=80">
+
+<div class="card-body">
+
+<h3>Street Sneakers</h3>
+
+<div class="rating">★★★★☆</div>
+
+<div class="price">$75 <span class="old">$95</span></div>
+
+<button class="buy" onclick="addCart('Street Sneakers')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=700&q=80">
+
+<div class="card-body">
+
+<h3>Executive Oxford</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$139 <span class="old">$179</span></div>
+
+<button class="buy" onclick="addCart('Executive Oxford')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="features">
+
+<h2 class="title">Why Choose ALLMEN?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h1>🚚</h1>
+<h3>Free Shipping</h3>
+<p>Free worldwide delivery on all orders above $75.</p>
+</div>
+
+<div class="feature">
+<h1>💳</h1>
+<h3>Secure Payments</h3>
+<p>100% secure checkout with modern payment systems.</p>
+</div>
+
+<div class="feature">
+<h1>⭐</h1>
+<h3>Premium Quality</h3>
+<p>Crafted using genuine leather and premium materials.</p>
+</div>
+
+<div class="feature">
+<h1>↩️</h1>
+<h3>Easy Returns</h3>
+<p>30-day hassle-free return policy.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter" id="newsletter">
+
+<h2 class="title">Join Our Newsletter</h2>
+
+<p>Receive exclusive discounts and new arrivals.</p>
+
+<input type="email" placeholder="Enter your email">
+
+<br>
+
+<button onclick="subscribe()">Subscribe</button>
+
+</section>
+
+<footer>
+
+<h2>ALLMEN Shoes</h2>
+
+<br>
+
+<p>Premium Footwear for Every Step.</p>
+
+<br>
+
+<p>© 2026 ALLMEN. All Rights Reserved.</p>
+
+</footer>
+
+<div class="cart">
+🛒 Cart: <span id="cartCount">0</span>
+</div>
+
+<script>
+
+let cart=0;
+
+function addCart(product){
+
+cart++;
+
+document.getElementById("cartCount").innerHTML=cart;
+
+alert(product+" added to cart!");
+
+}
+
+function subscribe(){
+
+alert("Thank you for subscribing to ALLMEN!");
+
+}
+
+</script>
+
+</body>
+</html>
